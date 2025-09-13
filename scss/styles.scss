@@ -1,0 +1,62 @@
+$color-primario: #001f3f;  // Azul marino oscuro
+$color-hover: lighten($color-primario, 15%);
+$fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+.barra-navegacion {
+  background-color: $color-primario !important;
+  font-family: $fuente-principal;
+
+  .enlace-navegacion {
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+
+    &:hover, &.activo {
+      color: $color-hover;
+      text-decoration: underline;
+    }
+  }
+
+  .menu-desplegable {
+    background-color: lighten($color-primario, 10%);
+    border-radius: 0.5rem;
+    padding: 0.5rem 0;
+
+    .item-menu-desplegable {
+      color: $color-primario;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: $color-hover;
+        color: rgb(47, 105, 116);
+      }
+    }
+  }
+}
+
+@keyframes aparecerDesdeArriba {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu-desplegable {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+
+  &.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    animation: aparecerDesdeArriba 0.3s forwards;
+  }
+}
