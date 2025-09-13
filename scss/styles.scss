@@ -1,62 +1,69 @@
-$color-primario: #001f3f;  // Azul marino oscuro
-$color-hover: lighten($color-primario, 15%);
-$fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$color-azul-marino: rgba(0, 31, 63, 0.85); 
+$color-letra: #fff;
+$color-hover: #a8c0ff;
 
 .barra-navegacion {
-  background-color: $color-primario !important;
-  font-family: $fuente-principal;
+  background-color: $color-azul-marino !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-  .enlace-navegacion {
-    color: rgb(255, 255, 255);
-    font-weight: 600;
-    font-size: 1.1rem;
+  .marca-navegacion {
+    color: $color-letra;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     transition: color 0.3s ease;
 
-    &:hover, &.activo {
+    &:hover {
       color: $color-hover;
       text-decoration: underline;
     }
   }
 
-  .menu-desplegable {
-    background-color: lighten($color-primario, 10%);
-    border-radius: 0.5rem;
-    padding: 0.5rem 0;
+  .lista-navegacion {
+    .enlace-navegacion {
+      color: $color-letra;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s ease, text-decoration 0.3s ease;
 
-    .item-menu-desplegable {
-      color: $color-primario;
-      font-weight: 500;
-      transition: background-color 0.3s ease;
-
+      &.activo,
       &:hover {
-        background-color: $color-hover;
-        color: rgb(47, 105, 116);
+        color: $color-hover;
+        text-decoration: underline;
+      }
+    }
+
+    .dropdown-menu {
+      background-color: rgba(0, 31, 63, 0.95);
+      border-radius: 0.5rem;
+      margin-top: 0.5rem;
+
+      .dropdown-item {
+        color: $color-letra;
+        font-weight: 500;
+        transition: background-color 0.3s ease, color 0.3s ease;
+
+        &:hover {
+          background-color: $color-hover;
+          color: #000;
+        }
       }
     }
   }
-}
 
-@keyframes aparecerDesdeArriba {
-  0% {
-    opacity: 0;
-    transform: translateY(-10px);
+  .boton-toggle {
+    border-color: $color-letra;
+    color: $color-letra;
+
+    &:hover {
+      background-color: $color-hover;
+      border-color: $color-hover;
+      color: #000;
+    }
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-.menu-desplegable {
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  pointer-events: none;
-
-  &.show {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-    animation: aparecerDesdeArriba 0.3s forwards;
+  .icono-toggle {
+    filter: invert(1); // para que el icono hamburguesa sea blanco
   }
 }

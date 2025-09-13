@@ -1,0 +1,53 @@
+.barra-navegacion {
+  background-color: rgba(0, 31, 63, 0.85) !important;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.barra-navegacion .marca-navegacion {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+}
+.barra-navegacion .marca-navegacion:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+.barra-navegacion .lista-navegacion .enlace-navegacion {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+.barra-navegacion .lista-navegacion .enlace-navegacion.activo,
+.barra-navegacion .lista-navegacion .enlace-navegacion:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+.barra-navegacion .lista-navegacion .dropdown-menu {
+  background-color: rgba(0, 31, 63, 0.95);
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+}
+.barra-navegacion .lista-navegacion .dropdown-menu .dropdown-item {
+  color: #fff;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.barra-navegacion .lista-navegacion .dropdown-menu .dropdown-item:hover {
+  background-color: #fff;
+  color: #000;
+}
+.barra-navegacion .boton-toggle {
+  border-color: #fff;
+  color: #fff;
+}
+.barra-navegacion .boton-toggle:hover {
+  background-color: #fff;
+  border-color: #a8c0ff;
+  color: #000;
+}
+.barra-navegacion .icono-toggle {
+  filter: invert(1);
+}

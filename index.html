@@ -3,25 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Menú Navegación Desplegable</title>
+  <title>Menú Azul Marino Transparente</title>
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
-<nav class="barra-navegacion navbar navbar-expand-lg navbar-light">  <div class="contenedor-fluid container-fluid">
-    <a class="marca-navegacion navbar-brand" href="#">MiSitio</a>
+<nav class="barra-navegacion navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="marca-navegacion navbar-brand" href="#">MiLogo</a>
+
     <button class="boton-toggle navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" 
       aria-controls="menuNavegacion" aria-expanded="false" aria-label="Alternar navegación">
       <span class="icono-toggle navbar-toggler-icon"></span>
     </button>
+
     <div class="colapsable navbar-collapse collapse" id="menuNavegacion">
-      <ul class="lista-navegacion navbar-nav">
+      <ul class="lista-navegacion navbar-nav ms-auto">
         <li class="item-navegacion nav-item">
           <a class="enlace-navegacion nav-link activo" aria-current="page" href="#">Inicio</a>
         </li>
         <li class="item-navegacion nav-item dropdown">
-          <a class="enlace-navegacion nav-link desplegable-toggle" href="#" id="enlaceDesplegable" role="button" 
+          <a class="enlace-navegacion nav-link dropdown-toggle" href="#" id="enlaceDesplegable" role="button" 
             data-bs-toggle="dropdown" aria-expanded="false">
             Servicios
           </a>
@@ -40,6 +43,5 @@
 </nav>
 
 <script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/menu.js"></script>
 </body>
 </html>
