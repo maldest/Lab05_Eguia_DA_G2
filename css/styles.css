@@ -26,7 +26,7 @@
   text-decoration: underline;
 }
 .barra-navegacion .lista-navegacion .dropdown-menu {
-  background-color: rgba(0, 31, 63, 0.95);
+  background-color: rgba(0, 31, 63, 0.85);
   border-radius: 0.5rem;
   margin-top: 0.5rem;
 }
